@@ -7,7 +7,7 @@ de comercio electrónico.
 ## 🌐 Demo en vivo
 
 Puedes ver la demo funcional desplegada en:  
-👉 [https://tu-usuario.github.io/TechDesignSolution](https://tu-usuario.github.io/TechDesignSolution)
+👉 https://zuki2610.github.io/TechDesignSolution/
 
 ## 📦 Tecnologías utilizadas
 
@@ -32,6 +32,7 @@ Formulario con validación visual.
 Estadísticas animadas con contadores y gráficas de dona.
 
 Efectos visuales estilo "Stark Industries" (colores, brillo, tipografías).
+<img width="1766" height="855" alt="image" src="https://github.com/user-attachments/assets/ba446771-ab9a-4c43-9021-95638d1d998d" />
 
 
 🎯 Buenas prácticas aplicadas
