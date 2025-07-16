@@ -1,0 +1,26 @@
+@use '../abstract/variables' as *;
+.tech-hero__cta,
+.tech-products__toggle {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 0 transparent;
+  border: 2px solid $primary-color;
+  background-color: transparent;
+  color: $primary-color;
+}
+
+.tech-hero__cta:hover,
+.tech-products__toggle:hover {
+  color: #000;
+  background-color: $primary-color;
+  box-shadow:
+    0 0 8px rgba(0, 240, 255, 0.3),
+    0 0 16px rgba(0, 240, 255, 0.4),
+    0 0 32px rgba(0, 240, 255, 0.5);
+  transform: translateY(-2px) scale(1.03);
+}

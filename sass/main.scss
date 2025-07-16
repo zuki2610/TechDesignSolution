@@ -1,0 +1,32 @@
+@use 'abstract/variables' as *;
+@use '../node_modules/bootstrap/scss/bootstrap' as *;
+@use 'abstract/mixins';
+@use 'base/reset';
+@use 'base/typography';
+@use 'layout/header';
+@use 'layout/hero';
+@use 'layout/about';
+@use 'layout/products';
+@use 'layout/stats';
+@use 'layout/form';
+@use 'layout/footer';
+@use 'components/buttons';
+@use 'components/card';
+@use 'components/animations' as *;
+
+body {
+  font-family: 'Share Tech Mono', monospace;
+}
+
+h1, h2,
+.tech-hero__title,
+.tech-product-card .card-title {
+  font-family: 'Anton', sans-serif;
+}
+
+.tech-navbar__brand,
+.tech-hero__cta,
+.tech-products__toggle {
+  font-family: 'Orbitron', sans-serif;
+}
+

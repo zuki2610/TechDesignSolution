@@ -1,0 +1,42 @@
+@use '../abstract/variables' as *;
+
+.tech-contact {
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  color: white;
+  padding: 6rem 2rem;
+  display: block; // Fuerza compilación
+}
+
+.tech-contact__title {
+  font-family: 'Anton', sans-serif;
+  font-size: 2.5rem;
+  color: $primary-color;
+  text-shadow: 0 0 10px rgba(0, 240, 255, 0.3);
+}
+
+.tech-contact__input,
+.tech-contact__textarea {
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 240, 255, 0.2);
+  color: white;
+  font-family: 'Share Tech Mono', monospace;
+  transition: border-color 0.3s ease;
+}
+
+.tech-contact__input:focus,
+.tech-contact__textarea:focus {
+  border-color: $primary-color;
+  box-shadow: 0 0 10px rgba(0, 240, 255, 0.4);
+  outline: none;
+  transform: scale(1.01);
+}
+
+.tech-contact__button {
+  font-family: 'Orbitron', sans-serif;
+  text-transform: uppercase;
+  padding: 0.75rem 2rem;
+  border: 2px solid $primary-color;
+  background-color: transparent;
+  color: $primary-color;
+  transition: all 0.3s ease;
+}

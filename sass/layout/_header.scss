@@ -1,0 +1,32 @@
+@use '../abstract/variables' as *;
+.tech-navbar__brand {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: $primary-color;
+  letter-spacing: 1px;
+  transition: text-shadow 0.3s ease, transform 0.3s ease;
+  position: relative;
+  z-index: 1;
+
+  &:hover {
+    text-shadow:
+      0 0 6px rgba(0, 240, 255, 0.5),
+      0 0 12px rgba(0, 240, 255, 0.3);
+    transform: scale(1.05);
+  }
+}
+.tech-navbar__brand {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: $primary-color;
+  letter-spacing: 1px;
+  position: relative;
+  z-index: 1;
+  animation: glowPulse 2s ease-in-out infinite;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}

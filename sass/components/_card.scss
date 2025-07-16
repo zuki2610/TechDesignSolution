@@ -1,0 +1,71 @@
+@use '../abstract/variables' as *;
+.tech-product-card {
+  background-color: #1e1e1e;
+  color: white;
+  border: 1px solid rgba(0, 240, 255, 0.2);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 240, 255, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+
+  .card-title {
+    color: $primary-color;
+    font-weight: bold;
+  }
+
+  .btn-outline-success {
+    border-color: $primary-color;
+    color: $primary-color;
+
+    &:hover {
+      background-color: $primary-color;
+      color: #000;
+    }
+  }
+
+  &:hover {
+    transform: translateY(-6px) scale(1.02);
+    border: 1px solid rgba(0, 240, 255, 0.5);
+    box-shadow: 0 0 20px rgba(0, 240, 255, 0.4);
+  }
+
+  // Efecto de luz "pasando" por encima
+  &::before {
+    content: "";
+    position: absolute;
+    top: -100%;
+    left: -45%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+      120deg,
+      transparent 0%,
+      rgba(0, 240, 255, 0.1) 45%,
+      rgba(0, 240, 255, 0.2) 50%,
+      rgba(0, 240, 255, 0.1) 55%,
+      transparent 100%
+    );
+    transform: rotate(25deg);
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+    pointer-events: none;
+  }
+
+  &:hover::before {
+    animation: scan-light 0.8s ease-out;
+    opacity: 1;
+  }
+}
+
+@keyframes scan-light {
+  from {
+    top: -100%;
+    left: -50%;
+  }
+  to {
+    top: 100%;
+    left: 100%;
+  }
+}

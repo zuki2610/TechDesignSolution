@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechDesign Solutions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Orbitron:wght@500&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">  
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+</head>
+<body>
+<header class="tech-header">
+  <nav class="tech-navbar navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand tech-navbar__brand" href="#">TechDesign</a>
+      <button class="navbar-toggler tech-navbar__toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse tech-navbar__menu" id="navbarContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link tech-navbar__link" href="#about">Quiénes Somos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link tech-navbar__link" href="#productos">Productos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link tech-navbar__link" href="#contacto">Contacto</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="tech-hero mt-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6 tech-hero__content">
+          <h1 class="tech-hero__title">TechDesign Solutions</h1>
+          <p class="tech-hero__subtitle">
+            Potenciamos el comercio electrónico con inteligencia artificial, automatización y visión futurista.
+          </p>
+          <a href="#productos" class="btn btn-outline-primary tech-hero__cta">Explorar Soluciones</a>
+        </div>
+        <div class="col-md-6 tech-hero__image">
+          <video src="./assets/img/logo.mp4" alt="Holograma Stark" class="img-fluid" autoplay loop muted></video>
+        </div>
+      </div>
+    </div>
+  </section>
+</header>
+<section id="productos" class="tech-products">
+  <div class="container">
+    <div class="tech-products__intro row justify-content-center align-items-center">
+      <div class="col-md-10">
+        <img src="./assets/img/layout.jpg" alt="Layouts e-commerce" class="img-fluid tech-products__image">
+        <div class="text-center mt-4">
+          <button class="btn btn-primary tech-products__toggle" id="toggleProducts">Ver más productos</button>
+        </div>
+      </div>
+    </div>
+   <div class="tech-products__list row mt-5 d-none" id="productCards">
+      <div class="col-md-4 mb-4">
+        <div class="card tech-product-card h-100">
+          <div class="card-body">
+            <h5 class="card-title">E-commerce Personalizado</h5>
+            <p class="card-text">Creamos tu tienda online desde cero, adaptada a tus productos y marca.</p>
+            <button class="btn btn-outline-success">Mas información</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card tech-product-card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Tu Website</h5>
+            <p class="card-text">Desarrollamos tu sitio web profesional con diseño responsivo.</p>
+            <button class="btn btn-outline-success">Mas información</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card tech-product-card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Pasarela de pagos</h5>
+            <p class="card-text">Integración con Webpay para todos los bancos.</p>
+            <button class="btn btn-outline-success">Mas información</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4" v-for="producto in otrosProductos">
+        <div class="card tech-product-card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Creación de reels</h5>
+            <p class="card-text">Reels para Instagram y TikTok que capturan la atención.</p>
+            <button class="btn btn-outline-success">Mas información</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card tech-product-card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Carruseles de Instagram</h5>
+            <p class="card-text">Diseños atractivos para aumentar tu alcance en redes sociales.</p>
+            <button class="btn btn-outline-success">Mas información</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card tech-product-card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Email marketing</h5>
+            <p class="card-text">Campañas automatizadas para fidelizar a tus clientes.</p>
+            <button class="btn btn-outline-success">Mas información</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card tech-product-card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Gestión de redes</h5>
+            <p class="card-text">Manejo profesional de Instagram, TikTok y Facebook.</p>
+            <button class="btn btn-outline-success">Mas información</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card tech-product-card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Publicidad digital</h5>
+            <p class="card-text">Campañas en Google Ads y Meta Ads optimizadas a resultados.</p>
+            <button class="btn btn-outline-success">Mas información</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card tech-product-card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Optimización SEO</h5>
+            <p class="card-text">Tu sitio en los primeros resultados de Google.</p>
+            <button class="btn btn-outline-success">Mas información</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="about" class="tech-about py-5">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6 tech-about__content">
+        <h2 class="tech-about__title">Quiénes Somos</h2>
+        <p class="tech-about__description">
+          En TechDesign Solutions, transformamos ideas en experiencias digitales.
+          Fusionamos creatividad, inteligencia artificial y soluciones tecnológicas
+          para impulsar negocios al futuro del comercio electrónico.
+        </p>
+      </div>
+      <div class="col-md-6 tech-about__image text-center">
+        <img src="./assets/img/team.jpg" alt="Equipo TechDesign" class="img-fluid tech-about__image-element">
+      </div>
+    </div>
+  </div>
+</section>
+<section id="stats" class="tech-stats py-5 mt-5">
+  <div class="container">
+    <h2 class="tech-stats__title text-center mb-5">Nuestro Impacto en Números</h2>
+    <div class="row text-center">
+      <div class="col-md-3 tech-stats__item">
+        <div class="tech-stats__chart" id="chart1"></div>
+        <h3 class="tech-stats__number" data-target="150">0</h3>
+        <p class="tech-stats__label">Proyectos completados</p>
+      </div>
+      <div class="col-md-3 tech-stats__item">
+        <div class="tech-stats__chart" id="chart2"></div>
+        <h3 class="tech-stats__number" data-target="120">0</h3>
+        <p class="tech-stats__label">Clientes satisfechos</p>
+      </div>
+      <div class="col-md-3 tech-stats__item">
+        <div class="tech-stats__chart" id="chart3"></div>
+        <h3 class="tech-stats__number" data-target="80">0</h3>
+        <p class="tech-stats__label">Tiendas lanzadas</p>
+      </div>
+      <div class="col-md-3 tech-stats__item">
+        <div class="tech-stats__chart" id="chart4"></div>
+        <h3 class="tech-stats__number" data-target="200">0</h3>
+        <p class="tech-stats__label">Integraciones realizadas</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="contacto" class="tech-contact py-5">
+  <div class="container">
+    <h2 class="tech-contact__title text-center mb-5">Contáctanos</h2>
+    <form class="tech-contact__form row g-3" id="contactForm">
+      <div class="col-md-6">
+        <input type="text" class="form-control tech-contact__input" placeholder="Tu nombre" required>
+      </div>
+      <div class="col-md-6">
+        <input type="email" class="form-control tech-contact__input" placeholder="Tu correo" required>
+      </div>
+      <div class="col-12">
+        <textarea class="form-control tech-contact__textarea" rows="5" placeholder="Tu mensaje" required></textarea>
+      </div>
+      <div class="col-12 text-center">
+        <button type="submit" class="btn btn-primary tech-contact__button">Enviar mensaje</button>
+      </div>
+    </form>
+  </div>
+</section>
+<footer class="tech-footer py-4 bg-dark text-white">
+  <div class="container">
+    <div class="row align-items-center text-center text-md-start">
+      <div class="col-md-4 mb-3 mb-md-0">
+        <h2 class="tech-footer__brand">TechDesign</h2>
+      </div>
+      <div class="col-md-4 mb-3 mb-md-0 d-flex justify-content-center">
+        <div class="tech-footer__social-icons">
+          <a href="#" class="tech-footer__icon"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="tech-footer__icon"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="tech-footer__icon"><i class="bi bi-twitter-x"></i></a>
+          <a href="#" class="tech-footer__icon"><i class="bi bi-linkedin"></i></a>
+          <a href="#" class="tech-footer__icon"><i class="bi bi-github"></i></a>
+        </div>
+      </div>
+      <div class="col-md-4 text-center text-md-end">
+        <p class="tech-footer__copy mb-0">© 2025 TechDesign Solutions</p>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+<script src="./js/main.js"></script>
+</html>

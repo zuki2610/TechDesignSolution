@@ -1,0 +1,13 @@
+@use '../abstract/variables' as *;
+
+h1, h2,
+.tech-hero__title,
+.tech-product-card .card-title {
+  font-family: 'Anton', sans-serif;
+  color: $primary-color;
+  text-shadow:
+    0 0 3px rgba(0, 240, 255, 0.3),
+    0 0 6px rgba(0, 240, 255, 0.4),
+    0 0 12px rgba(0, 240, 255, 0.5);
+  letter-spacing: 0.5px;
+}
